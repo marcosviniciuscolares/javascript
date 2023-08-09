@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros passos em DOM</title>
+    <style>
+        body{
+            background-color: cadetblue;
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Iniciando estudos com DOM</h1>
+    <P>Aqui vai o resultado</P>
+    <p>Aprendendo a usar DOM</p>
+    <div id="msg">clique aqui</div>
+
+    <script>
+        let p1 = window.document.getElementsByTagName('p')[1]
+        let d = window.document.querySelector('div#msg')
+
+        d.style.background = 'yellow'
+        /*let d = window.document.getElementById('msg')
+        d.style.background = 'blue'
+        d.innerText = 'Hi!'*/
+    </script>
 </body>
 </html>
