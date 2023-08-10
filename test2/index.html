@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing with DOM</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            border-radius: 19px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="welcome"></h1>
+    <div id="res">Clique para interajir.</div>
+
+    <script>
+        let come = window.prompt('Qual seu nome?')
+        let welcome = document.querySelector('h1#welcome')
+        let conteudo = document.querySelector('div#res')
+
+        welcome.innerHTML = `Seja bem vindo(a), ${come}`
+
+        conteudo.addEventListener('click', clicar)
+        conteudo.addEventListener('mouseenter', entrar)
+        conteudo.addEventListener('mouseout', sair)
+
+        function clicar() {
+            conteudo.innerHTML = 'Você clicou!'
+            conteudo.style.background = 'Blue'
+        }
+
+        function entrar() {
+            conteudo.innerHTML = 'Você entrou'
+            conteudo.style.background = 'Red'
+        }
+
+        function sair() {
+            conteudo.innerHTML = 'Você saiu'
+            conteudo.style.background = 'White'
+        }
+    </script>
+</body>
+</html>
