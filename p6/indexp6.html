@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with DOM</title>
+    <style>
+        body{
+            background-color: beige;
+            color: black;
+        }
+
+        input{
+            border-radius: 5px;
+            width: 100px;
+        }
+
+        div#res{
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="numero" id="numero">  +
+    <input type="number" name="numero2" id="numero2">
+    <input type="button" value="somar" onclick="somar()">
+
+    <div id="res">RESULTADO</div>
+
+    <script>
+        function somar () {
+            let texto1 = document.getElementById('numero')
+            let texto2 = document.querySelector('input#numero2')
+            let res = document.querySelector('div#res')
+            let valor1 = Number(texto1.value)
+            let valor2 = Number(texto2.value)
+            let soma = valor1 + valor2
+
+            res.innerHTML = `A soma ${valor1} e ${valor2} é de ${soma}`
+        }
+    </script>
+</body>
+</html>
