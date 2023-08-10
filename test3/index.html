@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando com DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+
+        div{
+            margin: 30px;
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        input{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mini-calculadora</h1>
+    <input type="number" name="numero1" id="numero1"> +
+    <input type="number" name="numero2" id="numero2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Respostas</div>
+
+    <script>
+        function somar() {
+
+        let texto1 = document.querySelector('input#numero1')
+        let texto2 = document.querySelector('input#numero2')
+        let valor1 = Number(texto1.value)
+        let valor2 = Number(texto2.value)
+        let soma = valor1 + valor2
+        let res = document.querySelector('div#res')
+
+        res.innerHTML = `A soma dos valores é ${soma}.`
+
+        }
+        
+    </script>
+</body>
+</html>
