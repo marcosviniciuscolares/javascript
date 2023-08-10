@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test of DOM</title>
+    <style>
+        div{
+            background-color: blue;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 19px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="welcome"></h1>
+    <div id="conteudo" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        Clique para interajir.
+    </div>
+
+    <script>
+
+        let come = window.prompt('Qual seu nome?')
+        let welcome = document.getElementById('welcome')
+        let a = document.getElementById('conteudo')
+        
+        welcome.innerHTML = `Welcome, ${come}`
+
+        function clicar() {
+            a.innerText = 'Você clicou!'
+            a.style.background = 'black'
+        }
+
+        function entrou() {
+            a.innerText = 'mouse está dentro'
+            a.style.background = 'red'
+        }
+
+        function saiu() {
+            a.innerText = 'Saiu'
+            a.style.background = 'gray'
+        }
+
+    </script>
+</body>
+</html>
