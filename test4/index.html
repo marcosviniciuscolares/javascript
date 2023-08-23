@@ -16,6 +16,8 @@
     <div id="res"></div>
 
     <script>
+        function Verificar() {
+
         let pais = document.querySelector('input#ipáis')
         let idade = document.querySelector('input#iidade')
         let vel = document.querySelector('input#ivel')
@@ -23,8 +25,17 @@
         let ano = Number(idade.value)
         let velo = Number(vel.value)
 
-            function Verificar(){
-                
-            }
+        res.innerHTML = `Sua idade é ${ano}`
+        res.innerHTML += `Seu país é ${pais}`
+        res.innerHTML += `Sua velocidade era de ${velo}Km/h`
+
+        if (velo > 90) {
+            res.innerHMTL += `Você foi multado! Dirija com mais cuidado.`
+        }
+        }
+
+    </script>
+
+
 </body>
 </html>
