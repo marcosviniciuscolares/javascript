@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAlculando su velocidade</title>
+    <title>Calculando sua velocidade</title>
 </head>
 <body>
     <h1>Seja bem-vindo a T.E.S.T.E</h1>
-    Coloque seu país: <input type="text" name="país" id="ipáis">
     Sua idade: <input type="number" name="idade" id="iidade">
     Sua velocidade: <input type="number" name="vel" id="ivel">
 
@@ -18,7 +17,6 @@
     <script>
         function Verificar() {
 
-        let pais = document.querySelector('input#ipáis')
         let idade = document.querySelector('input#iidade')
         let vel = document.querySelector('input#ivel')
         let res = document.querySelector('div#res')
@@ -26,12 +24,12 @@
         let velo = Number(vel.value)
 
         res.innerHTML = `Sua idade é ${ano}`
-        res.innerHTML += `Seu país é ${pais}`
         res.innerHTML += `Sua velocidade era de ${velo}Km/h`
-
-        if (velo > 90) {
-            res.innerHMTL += `Você foi multado! Dirija com mais cuidado.`
+        
+        if (velo > 30) {
+            res.innerHTML += 'Você foi multado!'
         }
+
         }
 
     </script>
