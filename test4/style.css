@@ -1,0 +1,30 @@
+@charset "UTF-8"
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --cor1: rgb(47, 100, 248);
+    --cor2: rgba(255, 255, 255, 0.726);
+    --cor3: rgb(43, 255, 24);
+}
+
+body{
+    background-color: var(--cor1);
+    text-align: center;
+    color: var(--cor2);
+}
+
+input{
+    margin: 20px;
+}
+
+div{
+    background-color: var(--cor3);
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
