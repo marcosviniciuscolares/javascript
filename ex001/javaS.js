@@ -6,11 +6,11 @@ function carregar() {
 
     msg.innerHTML = `Agora são ${hora} horas`
 
-    if ( hora >= 0 && hora < 12 ) {
-        img.src = 'bomdia.jpg'
-    } else if ( hora >= 12 && hora < 18 ) {
-        img.src = 'boatarde.jpg'
+    if ( hora >= 0 && hora < 12) {
+        img.src = 'manha.jpg'
+    } else if ( hora >= 12 && hora < 18) {
+        img.src = 'tarde.jpg'
     } else {
-        img.src = 'boanoite.jpg'
+        img.src = 'noite.jpg'
     }
 }
