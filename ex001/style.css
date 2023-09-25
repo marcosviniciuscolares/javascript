@@ -19,6 +19,15 @@ section{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.514);
 }
 
+div#msg{
+    text-align: center;
+}
+
+div#foto{
+    margin-top: 10px;
+    text-align: center;
+}
+
 img#imagem{
     width: 200px;
     height: 200px;
