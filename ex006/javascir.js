@@ -18,3 +18,16 @@ function inLista(n, l) {
         return false
     }
 }
+
+function Adicionar() {
+    if (iNumero(numero1.value) && !inLista(numero1.value, valores)) {
+        valores.push(Number(numero1.value))
+
+        let item = createElement('option')
+        item.text = `Valor ${numero1.value} adicionado!`
+        lista.appendChild(item)
+        resposta.innerHTML = ''
+    } else {
+        window.alert('ERRRRRRRRRRRRRRRRRRRO')
+    }
+}
